@@ -9,9 +9,10 @@ git clone https://github.com/amineelkouhen/redis-splunk-ingester.git
 
 There is a docker compose script which will bootstrap all the components required to make this demo work.
 
-1. Run `docker-compose up` from the root dir
-2. The containers will start in the correct order
-3. On startup:
+1. Build the project `./gradlew build`
+2. Run `docker-compose up` from the root dir
+3. The containers will start in the correct order
+4. On startup:
 - The Redis Service will bootstrap `Redis-Stack` on port 6379
 - The Ingester Service will bootstrap the Splunk-Redis Ingestion Module on Port 8686
 
@@ -33,4 +34,5 @@ ingester-service | [nio-8686-exec-1] c.r.s.i.storage.service.ProxyService     : 
 
 ### Software Reqs
 - Docker
-- Java 17+
+- Docker Compose
+- Java 11+
