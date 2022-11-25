@@ -25,14 +25,14 @@ public class TransformService {
         Enumeration<String> headerNames = request.getHeaderNames();
         while (headerNames.hasMoreElements()) {
             String headerName = headerNames.nextElement();
-            headersObject.accumulate(headerName, request.getHeader(headerName));
+            enrich(headersObject, headerName, request.getHeader(headerName));
         }
 
         enrich(event, "headers", headersObject);
         return payload;
     }
 
-    private JSONObject enrich(JSONObject event, String key, Object value) {
-        return event.accumulate(key, value);
+    private JSONObject enrich(JSONObject object, String key, Object value) {
+        return object.accumulate(key, value);
     }
 }
