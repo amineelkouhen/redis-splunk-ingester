@@ -33,14 +33,14 @@ By using docker-compose which will bootstrap all the components required to make
 - The Redis Service will bootstrap `Redis-Stack` on port 6379
 - The Ingester Service will bootstrap the Splunk-Redis Ingestion Module on Port 8686
 
-```bash
+```
 Creating redis-stack-service ... done
 Creating ingester-service    ... done
 Attaching to redis-stack-service, ingester-service
 ```
 
 - The Ingester Module will create the forward stream and will catch every request on Port 8686 to store the events
-```bash
+```
 ingester-service | [main] c.r.s.i.configuration.JedisConfig                   : host redis - port 6379
 ingester-service | [main] c.r.s.i.configuration.JedisConfig                   : stream group created: OK
 ingester-service | [nio-8686-exec-1] c.r.s.i.storage.service.StoreService     : starting a transaction
