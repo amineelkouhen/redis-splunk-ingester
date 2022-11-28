@@ -23,12 +23,13 @@ git clone https://github.com/amineelkouhen/redis-splunk-ingester.git
 
 You can run the project in your local machine by installing [Redis Stack](https://redis.io/docs/stack/get-started/install/) then running `./gradlew bootRun`.
 
-There is a docker compose script which will bootstrap all the components required to make this demo work.
+Or, 
 
-1. Build the project `./gradlew build`
-2. Run `docker-compose up` from the root dir
-3. The containers will start in the correct order
-4. On startup:
+By using docker-compose which will bootstrap all the components required to make this demo work.
+
+1. Run `docker-compose up` from the root dir
+2. The containers will start in the correct order
+3. On startup:
 - The Redis Service will bootstrap `Redis-Stack` on port 6379
 - The Ingester Service will bootstrap the Splunk-Redis Ingestion Module on Port 8686
 
