@@ -6,10 +6,10 @@ tasks:
       docker-compose up
 
 ports:
-  - port: 8686
+  - port: 8001
     onOpen: open-browser
     visibility: public
-  - port: 8001
+  - port: 8686
     onOpen: ignore
     visibility: public
   - port: 6379
