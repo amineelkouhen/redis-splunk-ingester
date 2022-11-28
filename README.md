@@ -21,6 +21,8 @@ Clone the Repository:
 git clone https://github.com/amineelkouhen/redis-splunk-ingester.git
 ```
 
+You can run the project in your local machine by installing [https://redis.io/docs/stack/get-started/install/](Redis Stack) then running `./gradlew bootRun`.
+
 There is a docker compose script which will bootstrap all the components required to make this demo work.
 
 1. Build the project `./gradlew build`
