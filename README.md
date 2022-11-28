@@ -1,5 +1,4 @@
 # Splunk-Redis Ingester
-
 The corner stone of our solution is Redis Enterprise. Redis Enterprise is a key-value on-memory database that offers automatic failover and replication to avoid data loss. 
 High and linear scalability to provide a tremendous throughput and a very low latency (sub milliseconds) when reading and writing data.
 The solution consists of a Redis Enterprise cluster and several components (upstream and downstream of Redis Enterprise):
