@@ -5,7 +5,7 @@ RUN mkdir /home/build
 COPY . /home/build
 WORKDIR /home/build
 RUN ./home/build/gradlew build
-COPY /home/build/libs/redis-splunk-ingester-1.0.0.jar redis-splunk-ingester-1.0.0.jar
+COPY /home/build/redis-splunk-ingester-1.0.0.jar redis-splunk-ingester-1.0.0.jar
 ENTRYPOINT ["java","-jar","/redis-splunk-ingester-1.0.0.jar"]
 
 ## Stage 2 - Package
